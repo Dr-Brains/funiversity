@@ -1,11 +1,11 @@
-package vercauteren.laurens.funiversity.services;
+package vercauteren.laurens.funiversity.api;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import vercauteren.laurens.funiversity.domain.Professor;
 import vercauteren.laurens.funiversity.domain.dtos.CreateProfessorDto;
 import vercauteren.laurens.funiversity.domain.dtos.ProfessorDto;
 
-@Service
+@Component
 public class ProfessorMapper {
 
 	public ProfessorDto getProfessorDtoFromProfessor(Professor professor) {
