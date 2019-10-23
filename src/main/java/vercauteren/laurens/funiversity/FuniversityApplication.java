@@ -1,4 +1,4 @@
-package vercauteren.laurens.funiversity.funiversity;
+package vercauteren.laurens.funiversity;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

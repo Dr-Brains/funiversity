@@ -1,4 +1,4 @@
-package vercauteren.laurens.funiversity.funiversity;
+package vercauteren.laurens.funiversity;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
