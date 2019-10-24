@@ -48,13 +48,16 @@ public class ProfessorController {
 	@PostMapping(consumes = "application/json", produces = "application/json")
 	@ResponseStatus(HttpStatus.CREATED)
 	public ProfessorDto addProfessor(@RequestBody CreateProfessorDto professorToAdd) {
-		logger.info("Trying to create professor with firstName: " + professorToAdd.getFirstName() + " and lastName: " + professorToAdd.getLastName());
+		logger.info(String.format("Trying to create professor with firstName: %s and lastName: %s",
+				professorToAdd.getFirstName(), professorToAdd.getLastName()));
 		Professor profToAdd = professorMapper.getProfessorFromCreateProfessorDto(professorToAdd);
 		try {
 			professorService.add(profToAdd);
-		} catch (IllegalArgumentException e){
+		} catch (IllegalArgumentException e) {
 
 		}
+		logger.info(String.format("Professor %s successfully added, assigned ID: %s",
+				profToAdd.getLastName(), profToAdd.getId()));
 		return professorMapper.getProfessorDtoFromProfessor(profToAdd);
 	}
 //
